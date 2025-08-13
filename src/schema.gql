@@ -1,0 +1,50 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Check {
+  address: String!
+  assessor: String!
+  buildingName: String!
+  construction: String!
+  dateOfAssessment: DateTime!
+  id: String!
+  lastUpdated: DateTime!
+  maxOccupancy: Int!
+  nextReviewDate: DateTime!
+  numberOfFloors: Int!
+  overallCompletionPercentage: Int!
+  responsiblePerson: String!
+  sections: [Section!]!
+  status: String!
+  useOfPremises: String!
+}
+
+"""
+A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format.
+"""
+scalar DateTime
+
+type Item {
+  helpText: String
+  id: String!
+  lastUpdated: DateTime!
+  notes: String
+  question: String!
+  requiresAction: Boolean!
+  response: String!
+}
+
+type Query {
+  check(id: String!): Check
+  checks: [Check!]!
+}
+
+type Section {
+  completionPercentage: Int!
+  description: String!
+  id: String!
+  items: [Item!]!
+  order: Int!
+  title: String!
+}
