@@ -4,7 +4,7 @@ import { Repository } from 'typeorm';
 import { Check } from './entities/check.entity';
 import { Section } from './entities/section.entity';
 import { Item } from './entities/item.entity';
-import type { CheckData } from './types/check-data.interface';
+import type { CheckData } from '@shared/interfaces/check-data.interface';
 import checkDataJson from '../data/check.json';
 
 @Injectable()
